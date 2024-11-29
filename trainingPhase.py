@@ -1,4 +1,5 @@
 import pandas as pd
+
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, classification_report
@@ -38,17 +39,17 @@ print("Accuracy:", accuracy)
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
 # 8. Visualisasi (Opsional)
-from sklearn.tree import export_graphviz
-import graphviz
+# from sklearn.tree import export_graphviz
+# import graphviz
 
-dot_data = export_graphviz(
-    model,
-    out_file=None,
-    feature_names=X.columns,
-    class_names=model.classes_.astype(str),
-    filled=True,
-    rounded=True,
-    special_characters=True
-)
-graph = graphviz.Source(dot_data)
-graph.render("decision_tree")  # Simpan visualisasi sebagai PDF
+# dot_data = export_graphviz(
+#     model,
+#     out_file=None,
+#     feature_names=X.columns,
+#     class_names=model.classes_.astype(str),
+#     filled=True,
+#     rounded=True,
+#     special_characters=True
+# )
+# graph = graphviz.Source(dot_data)
+# graph.render("decision_tree")  # Simpan visualisasi sebagai PDF
